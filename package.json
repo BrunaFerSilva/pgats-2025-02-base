@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/transfer.test.js --timeout 10000",
+    "test:all": "mocha test/**/*.test.js --timeout 10000",
+    "test:watch": "mocha test/transfer.test.js --watch --timeout 10000",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +27,10 @@
     "graphql": "^16.11.0",
     "jsonwebtoken": "^9.0.2",
     "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
   }
 }
